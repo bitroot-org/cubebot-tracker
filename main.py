@@ -80,7 +80,7 @@ if send_button or (text_input and text_input != st.session_state.get("last_text_
 User Profile:
 {user_profile}
 
-New message: {text_input or "Analyze all stats of workout."}
+New message: {text_input or "Analyze all stats of workout like caloreis,distance if applicable,steps if applicable,time,etc."}
 
 STRICTLY ANSWER QUERIES RELATED TO FITNESS,WORKOUT,NUTRITION,DIET ONLY. REFUSE TO ANSWER ANYTHING ELSE."""
 
