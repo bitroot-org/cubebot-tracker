@@ -113,7 +113,7 @@ with chat_container:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
             if "image" in message:
-                st.image(base64_to_image(message["image"]), caption="Uploaded Image", size=200)
+                st.image(base64_to_image(message["image"]), caption="Uploaded Image", width=200)
 
 # Clear chat history button
 if st.sidebar.button("Clear Chat History"):
