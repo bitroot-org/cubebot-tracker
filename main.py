@@ -3,6 +3,17 @@ import google.generativeai as genai
 from PIL import Image
 import io
 import base64
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the API key
+api_key = os.getenv("API_KEY")
+
+# Configure your library with the API key
+genai.configure(api_key=api_key)
 
 # Configure Gemini API
 genai.configure(api_key="AIzaSyAC4I_DbfMD0iK96J-4gjO87y4jW4gHZ7s")
