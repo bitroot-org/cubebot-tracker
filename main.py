@@ -80,7 +80,7 @@ if send_button or (text_input and text_input != st.session_state.get("last_text_
 User Profile:
 {user_profile}
 
-New message: {text_input}
+New message: {text_input or "Analyze all stats of workout."}
 
 STRICTLY ANSWER QUERIES RELATED TO FITNESS,WORKOUT,NUTRITION,DIET ONLY. REFUSE TO ANSWER ANYTHING ELSE."""
 
@@ -113,7 +113,7 @@ with chat_container:
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
             if "image" in message:
-                st.image(base64_to_image(message["image"]), caption="Uploaded Image", use_column_width=True)
+                st.image(base64_to_image(message["image"]), caption="Uploaded Image", size=200)
 
 # Clear chat history button
 if st.sidebar.button("Clear Chat History"):
